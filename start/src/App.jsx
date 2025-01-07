@@ -1,7 +1,12 @@
 import "./App.css";
+import { Welcome } from "./componenti/welcome";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Welcome name="Gianlorenzo" age={34} />
+    </>
+  );
 }
 
 export default App;
