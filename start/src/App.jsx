@@ -1,7 +1,13 @@
-import "./App.css";
+import Hello from "../../components/src/components/hello";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <div>
+        <Hello />
+      </div>
+    </>
+  );
 }
 
 export default App;
