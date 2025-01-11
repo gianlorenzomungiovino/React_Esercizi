@@ -1,7 +1,7 @@
 import { useInputBox } from "../hooks/useInputBox";
 
 export function InputBox() {
-  const { inputValue, setInputValue, isBotTyping, handleSubmit } =
+  const { inputValue, setInputValue, isBotTyping, handleSubmit, error } =
     useInputBox();
 
   return (
@@ -11,9 +11,10 @@ export function InputBox() {
         style={{
           opacity: isBotTyping ? 0.9 : 0,
           transition: "opacity 0.1s ease-in-out",
+          color: !error ? "black" : "red",
         }}
       >
-        Bot sta scrivendo...
+        {!error ? "Bot sta scrivendo..." : "Errore nelle risposte bot"}
       </span>
 
       <div className="input-btn-box">
